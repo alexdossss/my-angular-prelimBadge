@@ -1,0 +1,37 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a routerLink="/" class="brand-text">SummitSphere</a>
+    </div>
+    
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-menu" [class.active]="isMenuOpen">
+      <li class="nav-item">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" 
+           class="nav-link" (click)="closeMenu()">
+          Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/partners" routerLinkActive="active" class="nav-link" (click)="closeMenu()">
+          Partners
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/about" routerLinkActive="active" class="nav-link" (click)="closeMenu()">
+          About
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/join" routerLinkActive="active" class="nav-link nav-link-cta" (click)="closeMenu()">
+          Join Us
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

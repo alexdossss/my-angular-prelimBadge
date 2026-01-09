@@ -1,0 +1,156 @@
+.partners-container {
+  width: 100%;
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+}
+
+.partners-header {
+  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://media.istockphoto.com/id/1460172015/photo/businessmen-making-handshake-with-partner-greeting-dealing-merger-and-acquisition-business.jpg?s=612x612&w=0&k=20&c=IyQrIahedSW3WKsHSNsqtvX8dnzI1augnrtRrVeN3Dw=') center/cover no-repeat;
+  padding: 3rem 1.5rem;
+  padding-top: 5em;
+  text-align: center;
+  height: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.partners-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.partners-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.partners-section {
+  padding: 3rem 1.5rem;
+}
+
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.premium-partners,
+.standard-partners {
+  margin-bottom: 3rem;
+}
+
+.premium-partners h2,
+.standard-partners h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.premium-partners h2 {
+  color: var(--text-light);
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.partners-grid.premium {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.partner-card {
+  background-color: var(--secondary-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 0;
+}
+
+.partner-card:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(6, 182, 212, 0.25);
+}
+
+.premium-card {
+  border: 2px solid var(--accent-cyan);
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.05), var(--secondary-dark));
+}
+
+.premium-card:hover {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 12px 30px rgba(6, 182, 212, 0.35);
+}
+
+.partner-logo {
+  font-size: 4rem;
+  margin: 2rem 0 1rem 0;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 100%;
+}
+
+.partner-logo img {
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.partner-card:hover .partner-logo {
+  transform: scale(1.15);
+}
+
+.partner-card h3 {
+  font-size: 1.2rem;
+  margin: 1rem 1.5rem 0.5rem 1.5rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.premium-badge {
+  display: inline-block;
+  background-color: var(--accent-cyan);
+  color: var(--primary-dark);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 1rem 1.5rem 1.5rem 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .partners-header h1 {
+    font-size: 2rem;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .partners-grid.premium {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .partner-logo {
+    font-size: 2.5rem;
+  }
+}

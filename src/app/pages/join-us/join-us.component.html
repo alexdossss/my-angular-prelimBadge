@@ -1,0 +1,112 @@
+<div class="join-container">
+  <div class="join-header">
+    <h1>Join Our Community</h1>
+    <p>Register for an upcoming conference and connect with professionals worldwide</p>
+  </div>
+
+  <section class="join-content">
+    <div class="section-wrapper">
+      <div class="form-wrapper">
+        <div class="form-section">
+          <h2>Registration Form</h2>
+          
+          <form (ngSubmit)="onSubmit()" class="registration-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                [(ngModel)]="formData.name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                [(ngModel)]="formData.email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="role">Role</label>
+              <select
+                id="role"
+                [(ngModel)]="formData.role"
+                name="role"
+                required
+              >
+                <option *ngFor="let r of roles" [value]="r">{{ r }}</option>
+              </select>
+            </div>
+
+            <button type="submit" class="submit-btn" [disabled]="!formData.name || !formData.email">
+              Register Now
+            </button>
+          </form>
+        </div>
+
+        <div class="preview-section">
+          <h2>Registration Preview</h2>
+          
+          <div class="preview-card">
+            <div class="preview-content">
+              <div class="preview-item" *ngIf="formData.name">
+                <span class="preview-label">Name:</span>
+                <span class="preview-value">{{ formData.name }}</span>
+              </div>
+              <div class="preview-item" *ngIf="formData.email">
+                <span class="preview-label">Email:</span>
+                <span class="preview-value">{{ formData.email }}</span>
+              </div>
+              <div class="preview-item">
+                <span class="preview-label">Role:</span>
+                <span class="preview-value">{{ formData.role }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="success-message" *ngIf="isSubmitted">
+            <div class="success-content">
+              <span class="success-icon">✓</span>
+              <p>Thank you for registering! We'll send you confirmation details shortly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefits-section">
+        <h2>Why Register?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">📧</div>
+            <h3>Exclusive Updates</h3>
+            <p>Receive conference updates and special announcements</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🎟️</div>
+            <h3>Early Access</h3>
+            <p>Get early bird discounts and exclusive sessions</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🌐</div>
+            <h3>Networking</h3>
+            <p>Connect with attendees and speakers before the event</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">📱</div>
+            <h3>Mobile App</h3>
+            <p>Access the conference schedule through our mobile app</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

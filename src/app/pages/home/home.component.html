@@ -1,0 +1,39 @@
+<div class="home-container">
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1>Stop Attending. Start Connecting.</h1>
+      <p>Beyond the conference room, we build lasting spheres of influence. Summit Sphere curates world-class events designed to find your peers, forge strategic partnerships, and deliver the knowledge you need to lead your industry.</p>
+      <a href="/join" class="call-to-action-btn">Register Now</a>
+    </div>
+  </div>
+
+  <section class="conferences-section">
+    <div class="section-wrapper">
+      <h2>Upcoming Conferences</h2>
+      <div class="conferences-grid">
+        <div *ngFor="let conference of conferences" class="conference-card">
+          <div class="card-image">
+            <img [src]="conference.image" [alt]="conference.name" />
+          </div>
+          <div class="card-header">
+            <h3>{{ conference.name }}</h3>
+          </div>
+          <div class="card-body">
+            <div class="conference-date">
+              <span class="date-label">📅</span>
+              <span class="date-value">{{ conference.date }}</span>
+            </div>
+            <div class="conference-location">
+              <span class="location-label">📍</span>
+              <span class="location-value">{{ conference.location }}</span>
+            </div>
+            <p class="conference-description">{{ conference.description }}</p>
+          </div>
+          <div class="card-footer">
+            <a [href]="conference.website" target="_blank" rel="noopener noreferrer" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

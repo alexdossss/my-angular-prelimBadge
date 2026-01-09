@@ -1,0 +1,42 @@
+<div class="partners-container">
+  <div class="partners-header">
+    <h1>Our Partners</h1>
+    <p>The Summit is only achievable through collaboration</p>
+    <br>
+    <p>The success of every Summit Sphere event and the impact we have on <br>
+        connecting global professionals is amplified by our valued partners.</p>
+  </div>
+
+  <section class="partners-section">
+    <div class="section-wrapper">
+      <div class="premium-partners">
+        <h2>Premium Partners</h2>
+        <div class="partners-grid premium">
+          <ng-container *ngFor="let partner of partners">
+            <div *ngIf="partner.isPremium" class="partner-card premium-card">
+              <div class="partner-logo">
+                <img [src]="partner.logoUrl" [alt]="partner.name" />
+              </div>
+              <h3>{{ partner.name }}</h3>
+              <span class="premium-badge">Premium</span>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="standard-partners">
+        <h2>Standard Partners</h2>
+        <div class="partners-grid">
+          <ng-container *ngFor="let partner of partners">
+            <div *ngIf="!partner.isPremium" class="partner-card">
+              <div class="partner-logo">
+                <img [src]="partner.logoUrl" [alt]="partner.name" />
+              </div>
+              <h3>{{ partner.name }}</h3>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

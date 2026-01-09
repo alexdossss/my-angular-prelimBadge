@@ -1,0 +1,88 @@
+<div class="about-container">
+  <div class="about-header">
+    <h1>About SummitSphere</h1>
+    <p>Connecting Professionals, Inspiring Innovation Globally</p>
+  </div>
+
+  <section class="about-content">
+    <div class="section-wrapper">
+      <div class="about-intro">
+        <h2>Our Mission</h2>
+        <p>SummitSphere is dedicated to finding and connecting people who are essential to each other’s success. We achieve this by meticulously curating and hosting premier events, conferences, and digital forums that remove the barriers to interaction. Our mission is to create the perfect sphere of influence for every attendee, ensuring every connection is purposeful, productive, and profound.</p>
+      </div>
+
+      <div class="mission-grid">
+        <div class="mission-card">
+          <div class="mission-icon">🌍</div>
+          <h3>Global Reach</h3>
+          <p>Conferences across continents bringing together diverse talents and perspectives</p>
+        </div>
+        <div class="mission-card">
+          <div class="mission-icon">🤝</div>
+          <h3>Networking</h3>
+          <p>Forge meaningful connections with industry leaders and peers in your field</p>
+        </div>
+        <div class="mission-card">
+          <div class="mission-icon">💼</div>
+          <h3>Professional Growth</h3>
+          <p>Develop skills, gain insights, and advance your career through expert sessions</p>
+        </div>
+        <div class="mission-card">
+          <div class="mission-icon">🚀</div>
+          <h3>Innovation</h3>
+          <p>Discover cutting-edge technologies and business solutions shaping the future</p>
+        </div>
+      </div>
+
+      <div class="about-details">
+        <h2>Why Choose SummitSphere?</h2>
+        <button (click)="toggleInfo()" class="toggle-btn">
+          {{ showMore ? 'Hide Details' : 'Show Details' }}
+        </button>
+
+        <div class="details-content" *ngIf="showMore" [@slideDown]>
+          <div class="details-grid">
+            <div class="detail-item">
+              <h4>Expert Speakers</h4>
+              <p>Learn from industry veterans and thought leaders who share their experiences and insights</p>
+            </div>
+            <div class="detail-item">
+              <h4>Networking Opportunities</h4>
+              <p>Meet professionals from your industry and build lasting business relationships</p>
+            </div>
+            <div class="detail-item">
+              <h4>Hands-on Workshops</h4>
+              <p>Participate in practical sessions and gain real-world skills you can apply immediately</p>
+            </div>
+            <div class="detail-item">
+              <h4>Global Community</h4>
+              <p>Join a thriving community of over 50,000 professionals and innovators worldwide</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <h2>Our Impact</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">150+</div>
+            <p>Conferences Hosted</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50K+</div>
+            <p>Active Members</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <p>Countries Represented</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1000+</div>
+            <p>Expert Speakers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
